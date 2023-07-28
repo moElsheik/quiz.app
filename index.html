@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-mine vh-100" >
+    <div class="   d-flex align-items-center h-100">
+
+        
+
+            <section id="setting" class="m-auto bg-white rounded-3   ">
+                   <h2 class="bg-mine rounded-top-3 text-center py-5 h1 ">Setting Your Quiz</h2>
+
+
+                   <div class="p-4 ">
+                      <div class="form-group">
+                            <label class="pb-2" for="category">Category</label>
+                            <select id="category" class="form-select" name="category">
+                               <option value="9">General Knowledge</option>
+                               <option value="27">Animals</option>
+                               <option value="15">Video Games</option>
+                               <option value="23">History</option>
+                               <option value="21">Sports</option>
+                               <option value="18">Science: Computers</option>
+                            </select>
+                      </div>
+
+                    
+
+
+                     <div  class="form-group py-3 ">
+                           <label class="pb-2 " for="difficalty">Difficalty</label>
+
+                           <div class="form-check">
+                              <input class="form-check-input " type="radio" name="difficalty" id="easy" value="easy">
+                               <label class="form-check-label" for="easy">
+                                Easy
+                              </label>
+                            </div>
+
+
+                            <div class="form-check">
+                               <input class="form-check-input" type="radio" name="difficalty" id="medium" value="medium" checked>
+                               <label class="form-check-label" for="medium">
+                                Medium
+                               </label>
+                            </div>
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="difficalty" id="hard" value="hard" >
+                                <label class="form-check-label" for="hard">
+                                 Hard
+                                </label>
+                            </div>
+                       </div>
+
+                       <div class="form-group">
+                           <input type="number" class="form-control" name="numberOfQuestions" id="numberOfQuestions" aria-describedby="helpId"
+                            placeholder="Number Of questions" required>
+                       </div>
+
+                        <button id="startbtn" class="my-3 d-block ms-auto   bg-mine-light fw-bold lead  rounded-pill py-2 px-4">start</button>
+
+
+                   </div>
+                  
+            </section>
+
+
+
+
+
+            <section id="quiz" class="w-50 m-auto bg-white  rounded-3 ">
+                <div class="bg-mine rounded-top-3">
+                    <div class="innerDiv p-2">
+                      <h2 class="text-center h1 ">Quiz</h2>
+                   
+                      <span id="qNum" class="my-2 float-end  bg-primary text-white rounded-pill py-2 px-4">1 of 6 quistion</span>
+                      <span id="wrong" class="my-2 float-start  bg-danger text-white rounded-pill py-2  px-4">Wrong</span>
+                      <span id="correct" class="my-2 float-start  bg-success text-white rounded-pill py-2 px-4">Correct</span>
+                      <div class="clearfix"></div>
+                  </div> 
+
+                </div>
+
+                <div class="p-4">
+
+                    <p class="fs-5 fw-semibold">Q: <span id="quistion"></span></p>
+                    <div class="mb-5" id="answers"></div>
+
+                    <span class="bg-danger-subtle py-3 px-4  ms-3 rounded-3 text-danger fw-bold  "id="message" > You might forget to answer !!!!</span>
+
+
+
+
+                    <button id="submit" class="my-2  float-end btn bg-mine-light fw-bold   rounded-pill py-2 px-4">Submit</button>
+                    <div class="clearfix"></div>
+
+
+
+                  </div>
+
+
+            </section>
+
+            <section id="score" class="w-50 m-auto bg-white  rounded-3  ">
+
+                <h2 class=" text-center py-5 bg-mine rounded-top-3">finish</h2>
+
+                <div class="my-4 text-center fw-semibold fs-5">
+                    <p class="m-1 fs-3 fw-bolder" >score</p>
+                    <p  id="scoreValue" class="fs-3 fw-bolder"></p>
+                </div>
+
+                <button id="tryAgain" class="my-2 float-end btn bg-mine-light fw-bold rounded-pill py-2 px-4 m-3">try Again?</button>
+                <div class="clearfix"></div>
+
+            </section>
+
+    </div>
+
+
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
